@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native/types';
+import {ScrollView} from 'react-native';
 import {IAd} from '../../types/Ad';
 import Ad from './Ad';
 
@@ -9,11 +9,11 @@ interface IAdsProps {
 
 function Ads({ads}: IAdsProps) {
   return (
-    <View>
+    <ScrollView>
       {ads.map(ad => (
-        <Ad ad={ad} />
+        <Ad key={ad.ad_id} ad={ad} />
       ))}
-    </View>
+    </ScrollView>
   );
 }
 

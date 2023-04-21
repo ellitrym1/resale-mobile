@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native/types';
+import {Text, View} from 'react-native';
 import {IAd} from '../../types/Ad';
 
 function Ad({ad}: {ad: IAd}) {
