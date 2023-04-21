@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Text, View} from 'react-native';
 import {IAd} from './types/Ad';
+import Ads from './components/ads/Ads';
 
 const App = () => {
   const [ads, setAds] = useState<[IAd]>();
@@ -21,7 +22,7 @@ const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text>{ads ? ads[0].ad_id : 'no data'}</Text>
+      {ads ? <Ads ads={ads} /> : <Text>'no data'</Text>}
     </View>
   );
 };
